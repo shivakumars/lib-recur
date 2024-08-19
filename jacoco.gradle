@@ -1,17 +1,13 @@
-plugins {
-    id 'jacoco'
-}
+apply plugin: 'jacoco'
 
 jacoco {
-    toolVersion = "0.8.7" // Ensure you're using a compatible version
+    toolVersion = "0.8.7"
 }
 
 jacocoTestReport {
     reports {
-        xml.required.set(true)    // Generates the XML report
-        csv.required.set(false)   // Disables the CSV report
-        html.required.set(true)   // Generates the HTML report
+        xml.required.set(true)
+        csv.required.set(false)
+        html.required.set(true)
     }
 }
-
-check.dependsOn jacocoTestReport
